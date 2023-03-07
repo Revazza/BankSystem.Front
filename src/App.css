@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
 
-body {
+body,p {
   margin: 0;
   padding: 0;
 }
+

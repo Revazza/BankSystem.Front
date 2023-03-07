@@ -1,4 +1,19 @@
 
 $orange-red:#ea4b37;
 $fontTiltWarp:'Tilt Warp', cursive;
+$error-red:#F24C4C;
+
+
+@mixin button_classic{
+    background-color: $orange-red;
+    width: 100%;
+    height: 100%;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 13px 0;
+    font-family: $fontTiltWarp;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: none;
+}
 

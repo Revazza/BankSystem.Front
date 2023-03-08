@@ -9,7 +9,7 @@ const RegisterUser = () => {
   const navigate = useNavigate();
   const [errorMsg, setErrorMsg] = useState("");
 
-  const handleSubmission = async (inputs) => {
+  const handleSubmission = (inputs) => {
     axios
       .post(`${baseUrl}/InternetBank/register-user`, inputs)
       .then((response) => {
@@ -17,14 +17,14 @@ const RegisterUser = () => {
         navigate(`/login`);
       })
       .catch((error) => {
-        console.log(error)
+        console.log(error);
         setErrorMsg(error.response.data);
       });
   };
 
   return (
     <div className={styles.container}>
-      <RegisterUserForm onSubmit={handleSubmission} errorMsg={errorMsg}/>
+      <RegisterUserForm onSubmit={handleSubmission} errorMsg={errorMsg} />
     </div>
   );
 };

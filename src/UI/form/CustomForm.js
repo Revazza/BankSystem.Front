@@ -16,7 +16,7 @@ function CustomForm(props) {
   return (
     <Card className={styles.input_container}>
       <form className={styles.form_container} onSubmit={handleSubmission}>
-        <p>Register</p>
+        <p>{props.formName}</p>
         {props.inputs &&
           props.inputs.map((inp) => {
             return (

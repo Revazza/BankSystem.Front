@@ -36,11 +36,11 @@ export const registerOperatorInputs =
   {
     name: "email",
     type: "email",
-    placeholder: "email",
+    placeholder: "Email",
   },
   {
     name: "password",
     type: "password",
-    placeholder: "password",
+    placeholder: "Password",
   },
 ];

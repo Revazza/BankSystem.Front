@@ -31,8 +31,20 @@ export const registerUserInputs = [
   },
 ];
 
-export const registerOperatorInputs = 
-[
+export const registerOperatorInputs = [
+  {
+    name: "email",
+    type: "email",
+    placeholder: "Email",
+  },
+  {
+    name: "password",
+    type: "password",
+    placeholder: "Password",
+  },
+];
+
+export const loginInputs = [
   {
     name: "email",
     type: "email",

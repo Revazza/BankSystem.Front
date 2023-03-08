@@ -11,7 +11,7 @@ function RegisterOperator() {
   const [errorMsg, setErrorMsg] = useState("");
 
   const handleInputChange = (e) => {
-    const { name, value } = e;
+    const { name, value } = e.target;
     const inputStateSetter = {
       email: setEmail,
       password: setPassword,

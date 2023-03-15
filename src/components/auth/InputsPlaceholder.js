@@ -56,3 +56,16 @@ export const loginInputs = [
     placeholder: "Password",
   },
 ];
+
+export const atmLoginInputs = [
+  {
+    name: "cardNumber",
+    type: "string",
+    placeholder: "Card Number",
+  },
+  {
+    name: "pin",
+    type: "password",
+    placeholder: "Pin",
+  },
+];

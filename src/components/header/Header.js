@@ -10,8 +10,7 @@ const Header = () => {
     setCurrentLoc(location.pathname);
   }, [location]);
 
-  const headerId =
-    currentLoc == "/access-selector" ? styles.accessSelector : "";
+  const headerId = currentLoc == "/" ? styles.accessSelector : "";
 
   return (
     <div className={styles.container} id={headerId}>

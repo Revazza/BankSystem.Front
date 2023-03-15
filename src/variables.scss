@@ -17,3 +17,10 @@ $headerHeight:80px;
     border: none;
 }
 
+
+@mixin link_classic{
+    text-decoration: none;
+    font-family: $fontTiltWarp;
+    letter-spacing: 2px;
+    
+}

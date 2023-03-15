@@ -17,15 +17,19 @@ function AccessSelector() {
           id="internet-bank"
           onClick={handleUserChoice}
         ></div>
-        <p>internet bank</p>
+        <p id="internet-bank" onClick={handleUserChoice}>
+          internet bank
+        </p>
       </div>
       <div className={styles.wrapper}>
         <div
           className={styles.img_wrapper}
-          id="atm"
+          id="atm-login"
           onClick={handleUserChoice}
         ></div>
-        <p>atm</p>
+        <p id="atm-login" onClick={handleUserChoice}>
+          atm
+        </p>
       </div>
     </div>
   );

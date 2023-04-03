@@ -19,11 +19,12 @@ function AtmLogin() {
       pin,
     };
     axios
-      .post(`${atmUrl}/api/ATM/login`, inputs)
+      .post(`${atmUrl}/api/Card/login`, inputs)
       .then((response) => {
-        const token = response.data;
+        console.log(response)
+        const token = response.data.payload.token;
         Cookies.set("token", token);
-        navigate('/');
+        navigate('/atm');
       })
       .catch((error) => {
         setErrorMsg(error.message);

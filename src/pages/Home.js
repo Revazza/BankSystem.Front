@@ -2,34 +2,29 @@ import Cookies from "js-cookie";
 import React, { useEffect, useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Atm from "../components/home/atm/Atm";
-
-import jwt_decode from "jwt-decode";
+import jwtDecode from "jwt-decode";
 
 function Home() {
-  const [module, setModule] = useState("");
-
   const navigate = useNavigate();
 
   useEffect(() => {
     const token = Cookies.get("token");
     if (!token) {
       navigate("/select");
+      return;
     }
-    const decodedToken = jwt_decode(token);
-    console.log(decodedToken);
-    if (decodedToken.cardNumber) {
-      setModule("atm");
-    } else {
-      setModule("internet-bank");
+    const decodedToken = jwtDecode(token);
+    if (decodedToken.exp < Date.now() / 1000) {
+      navigate("/select");
+      Cookies.remove("token");
     }
   }, []);
 
   return (
     <React.Fragment>
       <Routes>
-        {module == "atm" && <Route path="/" element={<Atm />} />}
-        {module == "internet-bank" && ""}
-        </Routes>
+        <Route path="/atm" element={<Atm />} />
+      </Routes>
     </React.Fragment>
   );
 }

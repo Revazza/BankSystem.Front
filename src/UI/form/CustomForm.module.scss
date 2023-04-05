@@ -1,5 +1,4 @@
-
-@import '../../variables.scss';
+@import "../../variables.scss";
 
 .input_container {
   width: 100%;
@@ -43,5 +42,11 @@
   }
 }
 
-
-
+.successMsg {
+  p {
+    color: green;
+    font-size: 17px;
+    margin-top: 10px;
+    text-align: initial;
+  }
+}

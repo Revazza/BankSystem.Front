@@ -1,17 +1,30 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CustomForm from "../../../UI/form/CustomForm";
 import styles from "./AtmLogin.module.scss";
 import { atmUrl } from "../../../url";
 import { atmLoginInputs as inputs } from "../InputsPlaceholder";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import jwtDecode from "jwt-decode";
 
 function AtmLogin() {
   const [cardNumber, setCardNumber] = useState("");
   const [pin, setPin] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() =>{
+    const token = Cookies.get("token");
+    if(token)
+    {
+      const decodedJwt = jwtDecode(token);
+      if(decodedJwt.cardNumber)
+      {
+        navigate("/atm");
+      }
+    }
+  },[]);
 
   const handleSubmit = () => {
     const inputs = {

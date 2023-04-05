@@ -14,10 +14,10 @@ function AccessSelector() {
       <div className={styles.wrapper}>
         <div
           className={styles.img_wrapper}
-          id="internet-bank"
+          id="internet-bank-login"
           onClick={handleUserChoice}
         ></div>
-        <p id="internet-bank" onClick={handleUserChoice}>
+        <p id="internet-bank-login" onClick={handleUserChoice}>
           internet bank
         </p>
       </div>

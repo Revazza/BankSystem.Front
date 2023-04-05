@@ -20,7 +20,6 @@ function CashOut() {
   };
 
   const handleCashOut = () => {
-    
     const body = {
       amount: +amount,
       currency: +currency,
@@ -34,7 +33,9 @@ function CashOut() {
       })
       .then((response) => {
         const payload = response.data.payload;
-        setMessage("Cash out completed, see details on email");
+        const userEmail = payload.details.userEmail;
+        console.log(payload);
+        setMessage(`Cash out completed, see details on email ${userEmail}`);
         setErrorMsg("");
       })
       .catch((error) => {

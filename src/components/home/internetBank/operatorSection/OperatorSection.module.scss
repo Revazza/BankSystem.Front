@@ -1,0 +1,43 @@
+@import "../../../../variables.scss";
+
+.container {
+  height: calc(100vh - $headerHeight);
+  position: relative;
+}
+
+.btn_container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  justify-content: space-around;
+  align-items: center;
+}
+.btn_wrapper {
+  height: 100%;
+
+  button {
+    @include button_classic();
+    background-color: transparent;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.597);
+  }
+  transition: 300ms ease-out;
+}
+.btn_wrapper button:hover {
+  transition: 300ms ease-in;
+  background-color: $orange-red;
+}
+
+.go_back {
+  position: absolute;
+  font-size: 25px;
+  font-weight: bold;
+  top: 20px;
+  left: 420px;
+  cursor: pointer;
+  color: gray;
+  transition: 300ms ease-out;
+}
+.go_back:hover {
+  color: black;
+  transition: 300ms ease-in;
+}

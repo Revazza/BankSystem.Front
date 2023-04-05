@@ -36,6 +36,11 @@ function CustomForm(props) {
             <p>{props.errorMsg}</p>
           </div>
         )}
+        {props.successMsg && (
+          <div className={styles.successMsg}>
+            <p>{props.successMsg}</p>
+          </div>
+        )}
         <div className={styles.button_wrapper}>
           <button type="submit">Submit</button>
         </div>

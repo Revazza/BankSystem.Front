@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import CustomForm from '../../../UI/form/CustomForm';
-import { registerUserInputs as inputs } from "../InputsPlaceholder";
-
-
+import CustomForm from "../../../../../UI/form/CustomForm";
+import { registerUserInputs as inputs } from "../../InputPlaceholder";
 
 function RegisterUserForm(props) {
   const [firstName, setFirstName] = useState("");
@@ -41,9 +39,10 @@ function RegisterUserForm(props) {
     <CustomForm
       onInputChange={handleInputChange}
       onSubmit={handleSubmission}
-      formName="Register"
+      formName="Register User"
       errorMsg={props.errorMsg}
       inputs={inputs}
+      successMsg={props.successMsg}
     />
   );
 }

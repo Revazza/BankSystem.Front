@@ -6,11 +6,13 @@
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0px 60px;
 }
 
 .logo_wrapper {
   height: 50px;
-  margin-left: 60px;
   display: flex;
   align-items: center;
   img {
@@ -30,3 +32,12 @@
   background-color: rgb(49, 48, 48);
 
 }
+
+.log_out{
+  width: 15%;
+  button{
+    @include button_classic();
+    font-size: 15px; 
+  }
+}
+

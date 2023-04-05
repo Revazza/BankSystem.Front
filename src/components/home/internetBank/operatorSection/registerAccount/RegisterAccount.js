@@ -2,10 +2,10 @@ import React from "react";
 import RegisterAccountForm from "./RegisterAccountForm";
 import styles from "./RegisterAccount.module.scss";
 
-export default function RegisterAccount() {
+export default function RegisterAccount(props) {
   return (
     <div className={styles.container}>
-      <RegisterAccountForm />
+      <RegisterAccountForm setInitialSection={props.setInitialSection}/>
     </div>
   );
 }

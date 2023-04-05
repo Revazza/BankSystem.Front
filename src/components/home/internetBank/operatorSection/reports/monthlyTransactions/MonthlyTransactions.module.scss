@@ -1,0 +1,17 @@
+@import "../../../../../../variables.scss";
+
+.wrapper{
+    border: 1px solid rgba(128, 128, 128, 0.685);
+    text-align: center;
+    box-sizing: border-box;
+    padding: 15px;
+    font-family: $fontTiltWarp;
+    font-weight: 400;
+    border-radius: 5px;
+    span{
+        color: gray;
+    }
+}
+
+
+

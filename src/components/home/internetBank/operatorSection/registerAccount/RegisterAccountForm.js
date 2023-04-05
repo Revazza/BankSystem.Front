@@ -29,6 +29,9 @@ export default function RegisterAccountForm(props) {
 
   return (
     <div className={styles.container}>
+      <div onClick={props.setInitialSection} className={styles.go_back}>
+          <p>Go back</p>
+        </div>
       <CustomForm
         onInputChange={handleInputChange}
         onSubmit={handleSubmission}

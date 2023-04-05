@@ -1,0 +1,29 @@
+@import "../../../../../../variables.scss";
+
+.wrapper {
+  text-align: center;
+  font-family: $fontTiltWarp;
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.91);
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.profit {
+  border: 1px solid rgba(128, 128, 128, 0.685);
+  font-family: $fontTiltWarp;
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+}
+
+.timeframe {
+  text-align: center;
+  font-size: 25px;
+  font-family: $fontTiltWarp;
+  text-transform: uppercase;
+}

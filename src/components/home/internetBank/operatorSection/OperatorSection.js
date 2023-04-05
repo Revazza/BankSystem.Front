@@ -3,6 +3,7 @@ import styles from "./OperatorSection.module.scss";
 import RegisterUser from "./registerUser/RegisterUser";
 import RegisterAccount from "./registerAccount/RegisterAccount";
 import RegisterCard from "./registerCard/RegisterCard";
+import Reports from "./reports/Reports";
 
 function OperatorSection() {
   const [section, setSection] = useState("initial");
@@ -42,14 +43,19 @@ function OperatorSection() {
           </div>
         </div>
       )}
-      {section !== "initial" && (
-        <div onClick={setInitialSection} className={styles.go_back}>
-          <p>Go back</p>
-        </div>
+
+      {section === "add-user" && (
+        <RegisterUser setInitialSection={setInitialSection} />
       )}
-      {section === "add-user" && <RegisterUser />}
-      {section === "add-account" && <RegisterAccount />}
-      {section === "add-card" && <RegisterCard />}
+      {section === "add-account" && (
+        <RegisterAccount setInitialSection={setInitialSection} />
+      )}
+      {section === "add-card" && (
+        <RegisterCard setInitialSection={setInitialSection} />
+      )}
+      {section === "reports" && (
+        <Reports setInitialSection={setInitialSection} />
+      )}
     </div>
   );
 }

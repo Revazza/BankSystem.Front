@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { baseUrl } from "../../../../../url";
 
-function RegisterCard() {
+function RegisterCard(props) {
   const [errorMsg, setErrorMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
   const [iban, setIban] = useState("");
@@ -50,6 +50,9 @@ function RegisterCard() {
 
   return (
     <div className={styles.container}>
+      <div onClick={props.setInitialSection} className={styles.go_back}>
+          <p>Go back</p>
+        </div>
       <CustomForm
         onInputChange={handleInputChange}
         onSubmit={handleSubmission}

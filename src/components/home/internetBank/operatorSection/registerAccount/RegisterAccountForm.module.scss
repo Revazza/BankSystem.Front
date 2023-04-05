@@ -1,0 +1,14 @@
+.go_back {
+  position: absolute;
+  font-size: 25px;
+  font-weight: bold;
+  top: 20px;
+  left: 420px;
+  cursor: pointer;
+  color: gray;
+  transition: 300ms ease-out;
+}
+.go_back:hover {
+  color: black;
+  transition: 300ms ease-in;
+}

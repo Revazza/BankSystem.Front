@@ -7,10 +7,12 @@ import { baseUrl } from "../../../../../url";
 import Cookies from "js-cookie";
 import jwtDecode from "jwt-decode";
 
-const RegisterUser = () => {
+const RegisterUser = (props) => {
   const navigate = useNavigate();
   const [errorMsg, setErrorMsg] = useState("");
   const [message, setMessage] = useState("");
+
+  
 
   const handleSubmission = (inputs) => {
     const token = Cookies.get("token");
@@ -39,6 +41,9 @@ const RegisterUser = () => {
 
   return (
     <div className={styles.container}>
+       <div onClick={props.setInitialSection} className={styles.go_back}>
+          <p>Go back</p>
+        </div>
       <RegisterUserForm
         onSubmit={handleSubmission}
         errorMsg={errorMsg}

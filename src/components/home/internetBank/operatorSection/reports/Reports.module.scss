@@ -1,0 +1,73 @@
+@import "../../../../../variables.scss";
+
+.container {
+  width: 80%;
+  margin: 40px auto 0 auto;
+  box-sizing: border-box;
+  padding: 15px 20px;
+  height: initial;
+}
+.go_back {
+  font-size: 25px;
+  font-weight: bold;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  color: gray;
+  transition: 300ms ease-out;
+  margin-bottom: 20px;
+}
+.go_back:hover {
+  color: black;
+  transition: 300ms ease-in;
+}
+
+.monthly_transactions_wrapper,
+.average_profit_wrapper {
+  width: 80%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: space-between;
+}
+
+.profit_wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.average_profit_wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container {
+  h1 {
+    text-align: center;
+    font-family: $fontTiltWarp;
+    font-weight: 400;
+    color: $orange-red;
+    margin-top: 30px;
+    text-transform: capitalize;
+  }
+}
+
+.chart_wrapper {
+  margin-top: 50px;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 70px;
+  tspan {
+    font-size: 13px;
+  }
+}
+
+.total_cashout_wrapper {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: space-between;
+}

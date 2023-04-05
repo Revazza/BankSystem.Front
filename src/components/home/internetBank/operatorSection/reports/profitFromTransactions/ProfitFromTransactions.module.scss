@@ -1,0 +1,32 @@
+@import "../../../../../../variables.scss";
+
+.container {
+  margin-top: 50px;
+}
+
+.profit_container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: space-between;
+}
+.profit {
+  border: 1px solid rgba(128, 128, 128, 0.685);
+  font-family: $fontTiltWarp;
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  span {
+    color: gray;
+    font-style: italic;
+    font-size: small;
+  }
+}
+
+.timeframe {
+  text-align: center;
+  font-size: 25px;
+  font-family: $fontTiltWarp;
+  text-transform: uppercase;
+}

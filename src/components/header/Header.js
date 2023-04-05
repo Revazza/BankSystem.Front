@@ -21,7 +21,6 @@ const Header = () => {
 
   const showLogOut =
     location.pathname === "/atm" || location.pathname === "/internet-bank";
-  console.log(location);
   return (
     <div className={styles.container} id={headerId}>
       <div className={styles.logo_wrapper}>

@@ -6,7 +6,7 @@ import styles from "./AverageProfit.module.scss";
 
 function AverageProfit(props) {
   const [currency, setCurrency] = useState();
-  const [averageProfit, setAverageProfit] = useState();
+  const [averageProfit, setAverageProfit] = useState(0);
   useEffect(() => {
     const token = Cookies.get("token");
 

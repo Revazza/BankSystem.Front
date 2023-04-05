@@ -1,19 +1,18 @@
 import React from "react";
 import styles from "./Reports.module.scss";
-import Card from "../../../../../UI/card/Card";
 import MonthlyTransactions from "./monthlyTransactions/MonthlyTransactions";
 import ProfitFromTransactions from "./profitFromTransactions/ProfitFromTransactions";
 import AverageProfit from "./averageProfit/AverageProfit";
-import { ResponsiveContainer } from "recharts";
 import CustomChart from "./customChart/CustomChart";
 import TotalAtmCashOut from "./totalAtmCashOut/TotalAtmCashOut";
 
 function Reports(props) {
   return (
-    <Card className={styles.container}>
+    <div className={styles.container}>
       <div onClick={props.setInitialSection} className={styles.go_back}>
         <p>Go back</p>
       </div>
+
       <h1>Monthly Transactions</h1>
       <div className={styles.monthly_transactions_wrapper}>
         <MonthlyTransactions months="1" />
@@ -42,7 +41,7 @@ function Reports(props) {
         <TotalAtmCashOut currency="1" currencyType="USD" />
         <TotalAtmCashOut currency="2" currencyType="EUR" />
       </div>
-    </Card>
+    </div>
   );
 }
 

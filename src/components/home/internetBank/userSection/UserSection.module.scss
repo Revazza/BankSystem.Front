@@ -1,0 +1,26 @@
+@import "../../../../variables.scss";
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 30px 20px;
+  h1 {
+    text-align: center;
+    text-transform: capitalize;
+    font-family: $fontTiltWarp;
+  }
+}
+
+.accounts_container {
+  width: 80%;
+  margin: 50px auto 0 auto;
+  border: 1px solid rgba(128, 128, 128, 0.578);
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  
+}
+
+
+

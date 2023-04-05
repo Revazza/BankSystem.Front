@@ -4,26 +4,27 @@ import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import jwtDecode from "jwt-decode";
 import OperatorSection from "./operatorSection/OperatorSection";
-
+import UserSection from "./userSection/UserSection";
 
 function InternetBank() {
-    const [section, setSection] = useState("");
-    const navigate = useNavigate();
-    useEffect(() => {
-      const token = Cookies.get("token");
-      if (!token) {
-        navigate("/select");
-        return;
-      }
-      const decodedJwt = jwtDecode(token);
-      setSection(decodedJwt.role);
-    }, []);
-  
-    return (
-      <div className={styles.container}>
-        {section == "api-operator" && <OperatorSection />}
-      </div>
-    );
+  const [section, setSection] = useState("");
+  const navigate = useNavigate();
+  useEffect(() => {
+    const token = Cookies.get("token");
+    if (!token) {
+      navigate("/select");
+      return;
+    }
+    const decodedJwt = jwtDecode(token);
+    setSection(decodedJwt.role);
+  }, []);
+
+  return (
+    <div className={styles.container}>
+      {section == "api-operator" && <OperatorSection />}
+      {section == "api-user" && <UserSection />}
+    </div>
+  );
 }
 
 export default InternetBank;

@@ -1,0 +1,70 @@
+@import "../../../../../variables.scss";
+
+.container {
+  padding: 20px 30px;
+  .img_wrapper {
+    box-sizing: border-box;
+    padding-right: 30px;
+    border-radius: 1px;
+    width: fit-content;
+    border-right: 1px solid rgba(128, 128, 128, 0.492);
+    img {
+      object-fit: cover;
+    }
+  }
+  font-family: $fontTiltWarp;
+  display: flex;
+}
+
+.expiration_date {
+  font-size: 15px;
+  font-weight: 200;
+  color: rgba(0, 0, 0, 0.89);
+}
+
+.info_container {
+  position: relative;
+  margin-left: 20px;
+  span{
+    font-style: italic;
+    color: gray;
+  }
+  font-family: $fontUbuntu;
+  width: 100%;
+}
+
+.card_owner {
+  text-transform: capitalize;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.card_number,
+.card_cvv{
+    margin-top: 10px;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.expires_message{
+    color: $error-red;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+.mock_class{
+    height: 100px;
+}
+
+.display_none{
+    display: none;
+}
+
+
+
+
+
+

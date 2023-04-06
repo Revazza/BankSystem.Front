@@ -50,7 +50,12 @@ function Login() {
         navigate("/internet-bank");
       })
       .catch((error) => {
-        console.log(error.response)
+        if(!error.response)
+        {
+          setErrorMsg(error.message);
+          return;
+        }
+        console.log(error);
         setErrorMsg(error.response.data.Message);
       });
   };

@@ -1,26 +1,24 @@
+$orange-red: #ea4b37;
+$fontTiltWarp: "Tilt Warp", cursive;
+$error-red: #f24c4c;
+$headerHeight: 80px;
+$fontUbuntu: "Ubuntu", sans-serif;
 
-$orange-red:#ea4b37;
-$fontTiltWarp:'Tilt Warp', cursive;
-$error-red:#F24C4C;
-$headerHeight:80px;
-
-@mixin button_classic{
-    background-color: $orange-red;
-    width: 100%;
-    height: 100%;
-    font-size: 28px;
-    cursor: pointer;
-    padding: 13px 0;
-    font-family: $fontTiltWarp;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    border: none;
+@mixin button_classic {
+  background-color: $orange-red;
+  width: 100%;
+  height: 100%;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 13px 0;
+  font-family: $fontTiltWarp;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
 }
 
-
-@mixin link_classic{
-    text-decoration: none;
-    font-family: $fontTiltWarp;
-    letter-spacing: 2px;
-    
+@mixin link_classic {
+  text-decoration: none;
+  font-family: $fontTiltWarp;
+  letter-spacing: 2px;
 }
